@@ -1,0 +1,6 @@
+﻿run,epoch_range,gamma_mean_min,gamma_mean_max,last_gamma_mean,last_gamma_min,last_gamma_max,last_sharpness_mean,last_sharpness_min,last_sharpness_max
+Baseline,1-10,1.0,1.0,1.0,1.0,1.0,0.0,0.0,0.0
+Paper-condition Proposed,1-10,0.982204,1.058544,0.982204,0.971597,0.992812,0.024844,0.008144,0.041543
+Proposed finetune 10-50,11-50,0.977491,0.998354,0.990115,0.964638,1.015592,0.02094,0.003742,0.038138
+Active filter original LR,1-30,0.969234,0.989814,0.976746,0.931308,1.005896,0.024925,0.000153,0.097164
+Active filter aggressive,1-30,0.971873,2.506284,2.496223,1.020988,4.711669,2.992445,0.041976,7.423337
