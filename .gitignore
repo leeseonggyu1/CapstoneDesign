@@ -1,0 +1,25 @@
+# Large local artifacts
+*.pth
+*.pt
+*.ckpt
+*.zip
+
+# Dataset and generated image folders
+llvip/
+llvip_*/
+Yeoju_rain/
+Yeoju_*/
+*_filtering/
+*_filtered/
+
+# Training outputs and caches
+exp/
+logs/
+debug/
+__pycache__/
+.pytest_cache/
+
+# Local environment
+.venv/
+.conda/
+*.log
