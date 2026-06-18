@@ -2,6 +2,7 @@ $ErrorActionPreference = "Stop"
 
 $RepoUrl = "https://github.com/leeseonggyu1/CapstoneDesign.git"
 $Branch = "main"
+$UploadBranch = "capstone-upload-20260618"
 $RepoPath = (Resolve-Path -LiteralPath $PSScriptRoot).Path
 $SafeRepoPath = $RepoPath -replace "\\", "/"
 
@@ -33,4 +34,9 @@ if ($Changes) {
 }
 
 git -C $RepoPath branch -M $Branch
+
 git -C $RepoPath push -u origin $Branch
+if ($LASTEXITCODE -ne 0) {
+  Write-Host "Direct push to main was rejected. Uploading to $UploadBranch instead..."
+  git -C $RepoPath push -u origin "${Branch}:${UploadBranch}"
+}
